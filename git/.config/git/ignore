@@ -1,0 +1,9 @@
+# vscode files
+.vscode/**
+
+# mac files
+.DS_store
+
+# metals
+.bloop/**
+.metals/**
