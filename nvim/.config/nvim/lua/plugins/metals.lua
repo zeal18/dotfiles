@@ -131,7 +131,7 @@ return {
         function()
           require("metals").compile_cancel()
         end,
-        desc = "Metals compile cascade",
+        desc = "Metals compile cancel",
       },
       {
         "<leader>mi",
