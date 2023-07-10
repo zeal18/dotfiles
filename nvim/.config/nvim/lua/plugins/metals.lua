@@ -167,6 +167,11 @@ return {
       }
       metals_config.capabilities = require("cmp_nvim_lsp").default_capabilities()
 
+      -- A hacky workaround for the following issue: https://github.com/scalameta/nvim-metals/issues/417
+      metals_config.find_root_dir = function(patterns, startpath)
+        return vim.fn.getcwd()
+      end
+
       local dap = require("dap")
       dap.configurations.scala = {
         {
