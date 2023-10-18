@@ -6,6 +6,7 @@ THINGS_TO_STOW=(
 	wezterm
 	nvim
 	git
+	rio
 )
 
 for thing in ${THINGS_TO_STOW[@]}; do
