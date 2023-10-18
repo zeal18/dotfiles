@@ -33,7 +33,7 @@ performance = "High"
 # (windows: C:\Users\USER\AppData\Local\rio\themes\dracula.toml)
 #
 # Example
-#   theme = "dracula"
+theme = "one-half-dark"
 
 # Padding-x
 #
