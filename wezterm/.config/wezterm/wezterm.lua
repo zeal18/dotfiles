@@ -9,7 +9,7 @@ end
 config.hide_tab_bar_if_only_one_tab = true
 
 config.font = wezterm.font("FiraCode Nerd Font")
-config.color_scheme = "OneHalfDark"
+config.color_scheme = "one-half-warm"
 config.audible_bell = "Disabled"
 config.window_padding = {
 	left = 0,
