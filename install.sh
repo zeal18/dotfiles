@@ -7,6 +7,7 @@ THINGS_TO_STOW=(
 	nvim
 	git
 	rio
+	tmux
 )
 
 for thing in ${THINGS_TO_STOW[@]}; do
