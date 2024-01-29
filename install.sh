@@ -8,6 +8,7 @@ THINGS_TO_STOW=(
 	git
 	rio
 	tmux
+	lazygit
 )
 
 for thing in ${THINGS_TO_STOW[@]}; do
