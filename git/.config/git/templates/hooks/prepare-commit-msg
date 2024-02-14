@@ -1,0 +1,36 @@
+#!/bin/bash
+# The script below adds the branch name automatically to
+# every one of your commit messages. The regular expression
+# below searches for JIRA issue key's. The issue key will
+# be extracted out of your branch name
+#
+# Put this file into ~/.git-templates/hooks/prepare-commit-msg
+# and make sure it is executable (chmod +x ~/.git-templates/hooks/prepare-commit-msg)
+# Then run git config --global init.templatedir '~/.git-templates'
+# After that, every new git repository you create or clone will
+# have these hooks, and every commit message will have the issue
+# key prepended to the message automatically. If you want to add
+# this to an existing repository, just run `git init` in the repository
+# directory and you should be good to go.
+
+REGEX_ISSUE_ID="^[a-zA-Z0-9,\.\_]+-[0-9]+"
+
+# Find current branch name
+BRANCH_NAME=$(git symbolic-ref -q --short HEAD)
+
+if [[ -z "$BRANCH_NAME" ]]; then
+	exit 0
+fi
+
+# Check if Jira issue id is already in commit message
+TITLE_ISSUE_ID=$(head -n 1 "$1" | grep -o -E "$REGEX_ISSUE_ID")
+if [[ ! -z "$TITLE_ISSUE_ID" ]]; then
+	exit 0
+fi
+
+# Extract issue id from branch name
+ISSUE_ID=$(echo "$BRANCH_NAME" | grep -o -E "$REGEX_ISSUE_ID")
+
+if [[ ! -z "$ISSUE_ID" ]]; then
+	echo -e "$ISSUE_ID: $(cat "$1")" >"$1"
+fi

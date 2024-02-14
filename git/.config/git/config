@@ -4,3 +4,5 @@
   conflictstyle = diff3
 [core]
 	editor = nvim
+[init]
+  templatedir = ~/.config/git/templates
