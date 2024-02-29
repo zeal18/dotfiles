@@ -9,6 +9,7 @@ THINGS_TO_STOW=(
 	rio
 	tmux
 	lazygit
+	k9s
 )
 
 for thing in ${THINGS_TO_STOW[@]}; do

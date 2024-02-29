@@ -1,0 +1,11 @@
+# https://k9scli.io/topics/config/
+k9s:
+  ui: 
+    # Set to true to hide K9s header. Default false
+    headless: false
+    # Set to true to hide K9s logo. Default false
+    logoless: true
+    # Toggles icons display as not all terminal support these chars.
+    noIcons: false
+    # Uses one-dark skin located in $XDG_CONFIG_HOME/skins/one-dark.yaml
+    skin: one-dark
