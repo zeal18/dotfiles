@@ -31,7 +31,6 @@ return {
     dependencies = {
       "nvim-lua/plenary.nvim",
       "mfussenegger/nvim-dap",
-      "nvim-lualine/lualine.nvim",
     },
     lazy = true,
     ft = filetypes,
@@ -80,20 +79,6 @@ return {
       },
     },
     config = function(_, _)
-      local lualine = require("lualine")
-      local lualine_config = lualine.get_config()
-
-      local x_size = #lualine_config.sections.lualine_x
-      table.insert(lualine_config.sections.lualine_x, x_size, {
-        function()
-          return vim.g["metals_status"]
-        end,
-        cond = function()
-          return vim.g["metals_status"] ~= nil
-        end,
-      })
-      lualine.setup(lualine_config)
-
       local metals = require("metals")
       local metals_config = metals.bare_config()
       metals_config.init_options.statusBarProvider = "on"
