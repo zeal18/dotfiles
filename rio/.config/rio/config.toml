@@ -108,7 +108,7 @@ theme = "one-half-warm"
 #
 # You can also set family on root to overwritte all fonts
 [fonts]
-  size = 14
+  size = 11
   family = "FiraCode Nerd Font"
 #
 # Example
