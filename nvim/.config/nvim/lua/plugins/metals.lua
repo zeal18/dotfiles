@@ -85,7 +85,7 @@ return {
 
       -- Example of settings
       metals_config.settings = {
-        showImplicitArguments = true,
+        showImplicitArguments = false,
         excludedPackages = { "akka.actor.typed.javadsl", "com.github.swagger.akka.javadsl" },
       }
       metals_config.capabilities = require("cmp_nvim_lsp").default_capabilities()
