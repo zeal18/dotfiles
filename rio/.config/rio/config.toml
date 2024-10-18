@@ -1,11 +1,4 @@
 
-# Cursor
-#
-# Default cursor is Block
-# Other available options are: '_' and '|'
-#
-cursor = '▇'
-
 # Blinking Cursor
 #
 # Default is false
