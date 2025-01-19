@@ -52,9 +52,9 @@ return {
       {
         "<leader>mC",
         function()
-          require("metals").compile_cancel()
+          require("metals").compile_clean()
         end,
-        desc = "Metals compile cancel",
+        desc = "Metals compile clean",
       },
       {
         "<leader>mi",
@@ -69,6 +69,20 @@ return {
           require("metals").organize_imports()
         end,
         desc = "Metals organize imports",
+      },
+      {
+        "<leader>ml",
+        function()
+          require("metals").toggle_logs()
+        end,
+        desc = "Metals toggle logs",
+      },
+      {
+        "<leader>mR",
+        function()
+          require("metals").reset_workspace()
+        end,
+        desc = "Metals reset workspace",
       },
       {
         "<leader>cc",
