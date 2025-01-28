@@ -102,7 +102,7 @@ return {
         showImplicitArguments = false,
         excludedPackages = { "akka.actor.typed.javadsl", "com.github.swagger.akka.javadsl" },
       }
-      metals_config.capabilities = require("cmp_nvim_lsp").default_capabilities()
+      -- metals_config.capabilities = require("cmp_nvim_lsp").default_capabilities()
 
       -- A hacky workaround for the following issue: https://github.com/scalameta/nvim-metals/issues/417
       metals_config.find_root_dir = function(patterns, startpath)
