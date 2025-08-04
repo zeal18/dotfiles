@@ -1,7 +1,11 @@
 [pull]
 	ff = only
 [merge]
+  tool = nvimdiff
   conflictstyle = diff3
+[mergetool]
+  keepBackup = false
+  prompt = false
 [core]
 	editor = nvim
 [init]
