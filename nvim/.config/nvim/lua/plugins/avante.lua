@@ -10,15 +10,15 @@ return {
     -- system_prompt as function ensures LLM always has latest MCP server state
     -- This is evaluated for every message, even in existing chats
     system_prompt = function()
-        local hub = require("mcphub").get_hub_instance()
-        return hub and hub:get_active_servers_prompt() or ""
+      local hub = require("mcphub").get_hub_instance()
+      return hub and hub:get_active_servers_prompt() or ""
     end,
 
     -- Using function prevents requiring mcphub before it's loaded
     custom_tools = function()
-        return {
-            require("mcphub.extensions.avante").mcp_tool(),
-        }
+      return {
+        require("mcphub.extensions.avante").mcp_tool(),
+      }
     end,
   },
   -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
@@ -30,11 +30,11 @@ return {
     "nvim-lua/plenary.nvim",
     "MunifTanjim/nui.nvim",
     --- The below dependencies are optional,
-    "echasnovski/mini.pick", -- for file_selector provider mini.pick
+    "nvim-mini/mini.pick", -- for file_selector provider mini.pick
     "nvim-telescope/telescope.nvim", -- for file_selector provider telescope
     "hrsh7th/nvim-cmp", -- autocompletion for avante commands and mentions
     "ibhagwan/fzf-lua", -- for file_selector provider fzf
-    "nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
+    "nvim-tree/nvim-web-devicons", -- or nvim-mini/mini.icons
     {
       "zbirenbaum/copilot.lua", -- for providers='copilot'
       cmd = "Copilot", -- Lazy-load Copilot when the command is used
