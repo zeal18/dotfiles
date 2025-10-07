@@ -5,6 +5,9 @@ return {
     opts = {
       ---@type lspconfig.options
       servers = {
+        gopls = {
+          enabled = false,
+        },
         pylsp = {
           settings = {
             pylsp = {
