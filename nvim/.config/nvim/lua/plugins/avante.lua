@@ -46,8 +46,8 @@ return {
           debounce = 75,
           keymap = {
             accept = "<C-l>",
-            next = "<C-j>",
-            prev = "<C-k>",
+            -- next = "<C-j>",
+            -- prev = "<C-k>",
             dismiss = "<C-h>",
           },
         },
@@ -55,8 +55,8 @@ return {
           enabled = true,
           auto_refresh = true,
           keymap = {
-            jump_prev = "<C-k>",
-            jump_next = "<C-j>",
+            -- jump_prev = "<C-k>",
+            -- jump_next = "<C-j>",
             accept = "<CR>",
             refresh = "r",
             open = "<M-CR>",
