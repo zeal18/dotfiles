@@ -3,7 +3,7 @@ return {
   event = "VeryLazy",
   version = false, -- Never set this value to "*"! Never!
   opts = {
-    -- add any opts here
+    instructions_file = "AGENTS.md",
     -- for example
     provider = "copilot",
 
