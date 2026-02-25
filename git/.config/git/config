@@ -10,3 +10,4 @@
 	editor = nvim
 [init]
   templatedir = ~/.config/git/templates
+  defaultBranch = main
