@@ -11,3 +11,5 @@
 **/.bsp/**
 
 .scala-build/**
+
+**/.claude/settings.local.json
