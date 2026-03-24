@@ -13,3 +13,5 @@
 .scala-build/**
 
 **/.claude/settings.local.json
+
+.buildloop/**
