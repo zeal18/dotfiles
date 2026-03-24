@@ -15,3 +15,5 @@
 **/.claude/settings.local.json
 
 .buildloop/**
+
+.mcp.json
