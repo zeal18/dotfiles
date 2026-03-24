@@ -5,7 +5,16 @@ return {
   opts = {
     instructions_file = "AGENTS.md",
     -- for example
-    provider = "copilot",
+    provider = "claude",
+    providers = {
+      claude = {
+        endpoint = "https://api.anthropic.com",
+        model = "claude-sonnet-4-5",
+        extra_request_body = {
+          max_tokens = 8192,
+        },
+      },
+    },
 
     -- system_prompt as function ensures LLM always has latest MCP server state
     -- This is evaluated for every message, even in existing chats
