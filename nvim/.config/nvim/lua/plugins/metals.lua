@@ -100,6 +100,8 @@ return {
       -- Example of settings
       metals_config.settings = {
         showImplicitArguments = false,
+        defaultBspToBuildTool = true,
+        startMcpServer = true,
         excludedPackages = { "akka.actor.typed.javadsl", "com.github.swagger.akka.javadsl" },
       }
       -- metals_config.capabilities = require("cmp_nvim_lsp").default_capabilities()
